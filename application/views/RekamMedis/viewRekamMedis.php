@@ -16,7 +16,7 @@
 	            <div class="border-head">
 	              <h3>LIST REKAM MEDIS</h3>
 	            </div>
-	            <table id="myTable" class="table table-hover">
+	            <table id="myTable" class="table table-hover font-13px">
 	            	<thead>
 	            		<tr>
 	            			<th>No</th>
@@ -25,6 +25,7 @@
 	            			<th>Nama Dokter</th>
 	            			<th>ID Resep</th>
 	            			<th>Diagnosa</th>
+	            			<th>Aksi</th>
 	            		</tr>
 	            	</thead>
 	            	<tbody>
@@ -37,6 +38,9 @@
 		            			<td><?= $rm->id_dokter ?></td>
 		            			<td><?= $rm->id_resep ?></td>
 		            			<td><?= $rm->diagnosa ?></td>
+		            			<td>
+		            				<?= anchor('RekamMedis/edit/'.$rm->id_rekam_medis, 'Edit', 'class="btn btn-success"'); ?>
+		            			</td>
 		            		</tr>
 		            	<?php $no++; ?>
 	            		<?php endforeach ?>

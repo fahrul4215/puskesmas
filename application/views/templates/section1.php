@@ -5,6 +5,9 @@
         <?php if ($dahLogin = $this->session->flashdata('dahLogin')): ?>
           <p class="alert alert-success"><?= $dahLogin ?></p>
         <?php endif ?>
+        <?php if ($berhasil = $this->session->flashdata('berhasil')): ?>
+          <p class="alert alert-success"><?= $berhasil ?></p>
+        <?php endif ?>
       </div>
       <div class="sidebar-toggle-box">
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>

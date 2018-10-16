@@ -7,6 +7,10 @@ class RekamMedis extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('DataRekamMedis');
+		if (!$this->session->userdata('masuk')) {
+			$this->session->set_flashdata('gagal', 'Anda Belum Login, Silahkan Login terlebih dahulu');
+			redirect('login');
+		}
 	}
 
 	public function index()

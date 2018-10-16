@@ -3,23 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class DataRekamMedis extends CI_Model {
 
-	public function getRekamMedis($order="")
+	public function getRekamMedis()
 	{
-		if ($order=="") {
-			$order = 'asc';
-			$this->db->order_by('id_rekam_medis', $order);
-		} else {
-			$this->db->order_by('id_rekam_medis', $order);
-		}
 		return $this->db->get('rekam_medis')->result();
 	}
 
 	public function createRekamMedis()
 	{
-		if (!empty($rekamMedis = $this->getRekamMedis('desc'))) {
-			$id_rekam_medis = $rekamMedis[0]->id_rekam_medis + 1;
+		if (!is_null($rekam_medis = $this->db->select_max('id_rekam_medis')->get('rekam_medis')->result())) {
+			$id_rekam_medis = $rekam_medis[0]->id_rekam_medis + 1;
 		} else {
-			$id_rekam_medis = 1;
+			$id_pasien = 1;
 		}
 		$data = array(
 			'id_rekam_medis'=> $id_rekam_medis,
@@ -29,9 +23,9 @@ class DataRekamMedis extends CI_Model {
 			'diagnosa'		=> $this->input->post('diagnosa'),
 			'tanggal'		=> date('Y-m-d')
 		);
-		echo var_dump($data);
+		// echo var_dump($data);
 		$this->db->insert('rekam_medis', $data);
-		redirect($this->uri->segment(2));
+		redirect('RekamMedis');
 	}
 
 }

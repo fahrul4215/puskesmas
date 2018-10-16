@@ -25,7 +25,7 @@
                     </div>
                     <div class="text-center" style="color: #fff;">
                       <br><i class="fa fa-group fa-4x"></i><br><br>
-                      <a class="btn btn-default" href="<?= site_url('') ?>">Tambah Pasien</a>
+                      <a class="btn btn-default" href="<?= site_url('registrasi/pasien') ?>">Tambah Pasien</a>
                     </div>
                   </div>
                 </div>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="text-center" style="color: #fff;">
                       <br><i class="fa fa-plus-square fa-4x"></i><br><br>
-                      <a class="btn btn-default" href="<?= site_url('') ?>">Tambah Pasien Berobat</a>
+                      <a class="btn btn-default" href="<?= site_url('Registrasi/berobat') ?>">Tambah Pasien Berobat</a>
                     </div>
                   </div>
                 </div>

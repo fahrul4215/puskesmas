@@ -17,3 +17,18 @@
     bottom: 0;
     background: #2f323a;
 }
+.btn-tambah {
+	margin: 0 0 2% 0;
+}
+.form-control {
+	height: 35px !important;
+}
+.dated {
+	padding: 0 !important;
+}
+.date-span {
+	margin-left: -10px;
+}
+.select2-container {
+    width: 50% !important;
+}

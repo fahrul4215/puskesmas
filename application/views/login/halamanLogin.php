@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Login Admin</title>
+	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/datatables.min.css') ?>"/>
 	<style type="text/css">
 		.container-fluid {
@@ -52,7 +52,7 @@
 						<p class="alert alert-danger"><?= $gagal ?></p>
 					<?php endif ?>
 				</div>
-				<h1 class="text-center">Login Admin</h1>
+				<h1 class="text-center">Login</h1>
 			</div>
 			<div class="kiri text-center">
 				<img src="<?= base_url('assets/gambar/LogoDepkes.png') ?>" alt="Logo Depkes">

@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('Home/index');
+		$this->load->view('Home/viewHome');
 		if (!$this->session->userdata('masuk')) {
 			$this->session->set_flashdata('gagal', 'Anda Belum Login, Silahkan Login terlebih dahulu');
 			redirect('login');
