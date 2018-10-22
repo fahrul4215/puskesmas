@@ -28,6 +28,7 @@ class Registrasi extends CI_Controller {
 
 	public function berobat()
 	{
+		
 		$data['pasien'] = $this->DataPasien->getPasien();
 		$this->load->view('Registrasi/viewRegistrasiBerobat', $data);
 	}

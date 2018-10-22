@@ -28,55 +28,55 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
           <li class="mt">
-            <a class="active" href="<?= site_url('home') ?>">
+            <a <?= ($this->uri->segment(1)=="home"||$this->uri->segment(1)=="Home") ? 'class="active"' : ''; ?> href="<?= site_url('home') ?>">
               <i class="fa fa-dashboard"></i>
               <span>Dashboard</span>
             </a>
           </li>
           <li class="sub-menu">
-            <a href="<?= site_url('pasien') ?>">
+            <a <?= ($this->uri->segment(1)=="pasien"||$this->uri->segment(1)=="Pasien") ? 'class="active"' : ''; ?> href="<?= site_url('pasien') ?>">
               <i class="fa fa-users"></i>
               <span>Pasien</span>
             </a>
           </li>
           <li class="sub-menu">
-            <a href="<?= site_url('dokter') ?>">
+            <a <?= ($this->uri->segment(1)=="Dokter"||$this->uri->segment(1)=="dokter") ? 'class="active"' : ''; ?> href="<?= site_url('dokter') ?>">
               <i class="fa fa-user-md"></i>
               <span>Dokter</span>
             </a>
           </li>
           <li class="sub-menu">
-            <a href="<?= site_url('petugas') ?>">
+            <a <?= ($this->uri->segment(1)=="Petugas"||$this->uri->segment(1)=="petugas") ? 'class="active"' : ''; ?> href="<?= site_url('petugas') ?>">
               <i class="fa fa-users"></i>
               <span>Petugas</span>
             </a>
           </li>
           <li class="sub-menu">
-            <a href="<?= site_url('obat') ?>">
+            <a <?= ($this->uri->segment(1)=="Obat"||$this->uri->segment(1)=="obat") ? 'class="active"' : ''; ?> href="<?= site_url('obat') ?>">
               <i class="fa fa-tasks"></i>
               <span>Obat</span>
             </a>
           </li>
           <li class="sub-menu">
-            <a href="<?= site_url('poli') ?>">
+            <a <?= ($this->uri->segment(1)=="Poli"||$this->uri->segment(1)=="poli") ? 'class="active"' : ''; ?> href="<?= site_url('poli') ?>">
               <i class="fa fa-th"></i>
               <span>Poli</span>
             </a>
           </li>
           <li>
-            <a href="<?= site_url('JenisKartu') ?>">
+            <a <?= ($this->uri->segment(1)=="jeniskartu"||$this->uri->segment(1)=="JenisKartu") ? 'class="active"' : ''; ?> href="<?= site_url('JenisKartu') ?>">
               <i class="fa fa-credit-card"></i>
               <span>Jenis Kartu</span>
             </a>
           </li>
           <li class="sub-menu">
-            <a href="<?= site_url('RekamMedis') ?>">
+            <a <?= ($this->uri->segment(1)=="rekammedis"||$this->uri->segment(1)=="RekamMedis") ? 'class="active"' : ''; ?> href="<?= site_url('RekamMedis') ?>">
               <i class=" fa fa-medkit"></i>
               <span>Rekam Medis</span>
             </a>
           </li>
           <li class="sub-menu">
-            <a href="<?= site_url('register') ?>">
+            <a <?= ($this->uri->segment(1)=="Registrasi"||$this->uri->segment(1)=="registrasi") ? 'class="active"' : ''; ?> href="<?= site_url('Registrasi') ?>">
               <i class="fa fa-desktop"></i>
               <span>List Register</span>
             </a>
