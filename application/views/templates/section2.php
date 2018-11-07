@@ -3,7 +3,7 @@
         <div class="credits">
           Created with <i class="fa fa-heart"></i> from 2018
         </div>
-        <a href="index.html#" class="go-top">
+        <a href="#" class="go-top">
           <i class="fa fa-angle-up"></i>
           </a>
       </div>

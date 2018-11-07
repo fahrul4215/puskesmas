@@ -3,8 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class DataRegistrasi extends CI_Model {
 
-	public function getRegistrasi()
+	public function getRegistrasi($sort='', $tgl='')
 	{
+		if ($sort!='') {
+			$this->db->order_by('id_registrasi', 'desc');
+		}
+		if ($tgl!='') {
+			$this->db->where('tanggal', $tgl);
+		}
 		return $this->db->get('registrasi')->result();
 	}
 
@@ -15,6 +21,7 @@ class DataRegistrasi extends CI_Model {
 		} else {
 			$id_registrasi = 1;
 		}
+
 		$data = array(
 			'id_registrasi'	=> $id_registrasi,
 			'id_pasien'		=> $this->input->post('id_pasien'),
@@ -23,7 +30,7 @@ class DataRegistrasi extends CI_Model {
 			'tanggal'		=> date('Y-m-d'),
 			'no_antrian'	=> $this->input->post('no_antrian'),
 		);
-		$this->db->insert('Table', $data);
+		$this->db->insert('registrasi', $data);
 	}
 
 }

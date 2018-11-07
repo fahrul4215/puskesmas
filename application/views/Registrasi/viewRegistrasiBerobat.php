@@ -53,7 +53,7 @@
 						</tr>
 						<tr>
 							<td>No Antrian</td>
-							<td><input type="number" name="no_antrian" class="form-control" value="" required="required" placeholder="Masukkan no_antrian"></td>
+							<td><input type="number" name="no_antrian" class="form-control" value="<?= $no_antrian ?>" required="required" readonly></td>
 						</tr>
 						<tr>
 							<td colspan="2" class="text-center">
