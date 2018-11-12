@@ -26,7 +26,8 @@ class Login extends CI_Controller {
 					$this->session->set_flashdata('dahLogin',
 						'Anda Berhasil Login dengan username '.$p->username);
 					$array = array(
-						'id_petugas' => $p->id_petugas
+						'id_petugas'	=> $p->id_petugas,
+						'level'			=> 'petugas'
 					);					
 					$this->session->set_userdata('masuk', $array);
 					redirect('Home');
@@ -35,6 +36,28 @@ class Login extends CI_Controller {
 			$this->session->set_flashdata('gagal', 'Username atau Password Salah');
 		}
 		$this->load->view('Login/halamanLogin');
+	}
+
+	public function dokter()
+	{
+		if ($this->input->post('login')) {
+			$dokter = $this->DataDokter->getDokter();
+			foreach ($dokter as $p) {
+				if ($this->input->post('username')==$p->username &&
+					md5($this->input->post('password'))==$p->password) {
+					$this->session->set_flashdata('dahLogin',
+						'Anda Berhasil Login dengan username '.$p->username);
+					$array = array(
+						'id_dokter'	=> $p->id_dokter,
+						'level'		=> 'dokter'
+					);					
+					$this->session->set_userdata('masuk', $array);
+					redirect('Home');
+				}
+			}
+			$this->session->set_flashdata('gagal', 'Username atau Password Salah');
+		}
+		$this->load->view('Login/halamanLoginDokter');
 	}
 
 	public function logout()

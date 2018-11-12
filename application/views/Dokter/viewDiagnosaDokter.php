@@ -4,21 +4,69 @@
 	<title>Dokter</title>
 
 	<?php $this->load->view('templates/css'); ?>
+	<style type="text/css">
+		#diagnosa {
+			width: 70vw
+		}
+		body {
+			overflow-x: hidden
+		}
+		.isi {
+			margin-bottom: 5%
+		}
+	</style>
 </head>
 <body>
-	<div id="container" class="text-center">
-		<canvas class="border border-dark" id="diagnosa" width="500" height="250">
-			Your Browser does not support Canvas, please upgrade
-		</canvas>
-		<div>
-			<input type="button" onclick="uploadGambar()" value="Simpan" />
-			<input type="button" id="clearCanvas" value="Reset" />
-		</div>
-		<form method="post" accept-charset="utf-8" name="formUpload">
-			<input name="hidden_data" id='hidden_data' type="hidden"/>
-		</form>
-	</div>
+	<?php $this->load->view('templates/section1'); ?>
+	<section id="main-content" class="container">
+		<section class="wrapper">
+			<div class="row mt">
+				<div class="col-lg-12 content-panel">
+					<div id="container" class="text-center isi">
+						<div class="border-head">
+							<h3 style="text-align: left">Diagnosa</h3>
+						</div>
+						<div style="margin-bottom: 10px">
+							<p>Pilih Tool : </p>
+							<button class="btn btn-dark" type="button" id="markerTool"><span class="fa fa-pencil"></span> Marker</button>
+							<button class="btn btn-dark" type="button" id="clearTool"><span class="fa fa-eraser"></span> Penghapus</button>
+						</div>
+						<canvas class="border border-dark rounded" id="diagnosa">
+							Browser anda tidak support Canvas, silahkan upgrade browser anda atau gunakan browser lain
+						</canvas>
+						<div>
+							<input class="btn btn-primary" type="button" onclick="uploadGambar()" value="Simpan" />
+							<input class="btn btn-danger" type="button" id="clearCanvas" value="Reset" />
+						</div>
+						<form method="post" accept-charset="utf-8" name="formUpload">
+							<input name="hidden_data" id='hidden_data' type="hidden"/>
+						</form>
+						<br>
+						<div class="border-head">
+							<h3 style="text-align: left">Resep</h3>
+						</div>
+						<div style="margin-bottom: 10px">
+							<p>Pilih Tool : </p>
+							<button class="btn btn-dark" type="button" id="markerTool"><span class="fa fa-pencil"></span> Marker</button>
+							<button class="btn btn-dark" type="button" id="clearTool"><span class="fa fa-eraser"></span> Penghapus</button>
+						</div>
+						<canvas class="border border-dark rounded" id="diagnosa">
+							Browser anda tidak support Canvas, silahkan upgrade browser anda atau gunakan browser lain
+						</canvas>
+						<div>
+							<input class="btn btn-primary" type="button" onclick="uploadGambar()" value="Simpan" />
+							<input class="btn btn-danger" type="button" id="clearCanvas" value="Reset" />
+						</div>
+						<form method="post" accept-charset="utf-8" name="formUpload">
+							<input name="hidden_data" id='hidden_data' type="hidden"/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
 
+	<?php $this->load->view('templates/section2'); ?>
 	<?php $this->load->view('templates/javascript'); ?>
 	<script>
 		// aksi menggambar di canvas
