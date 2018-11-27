@@ -5,14 +5,14 @@
 
 	<?php $this->load->view('templates/css'); ?>
 	<style type="text/css">
-		#diagnosa {
-			width: 70vw
-		}
+		/* #diagnosa { */
+			/* width: 70vw; */
+		/* } */
 		body {
-			overflow-x: hidden
+			overflow-x: hidden;
 		}
 		.isi {
-			margin-bottom: 5%
+			margin-bottom: 5%;
 		}
 	</style>
 </head>
@@ -31,7 +31,7 @@
 							<button class="btn btn-dark" type="button" id="markerTool"><span class="fa fa-pencil"></span> Marker</button>
 							<button class="btn btn-dark" type="button" id="clearTool"><span class="fa fa-eraser"></span> Penghapus</button>
 						</div>
-						<canvas class="border border-dark rounded" id="diagnosa">
+						<canvas class="border border-dark rounded" id="diagnosa" width="700" height="450">
 							Browser anda tidak support Canvas, silahkan upgrade browser anda atau gunakan browser lain
 						</canvas>
 						<div>
@@ -45,7 +45,7 @@
 						<div class="border-head">
 							<h3 style="text-align: left">Resep</h3>
 						</div>
-						<div style="margin-bottom: 10px">
+						<!-- <div style="margin-bottom: 10px">
 							<p>Pilih Tool : </p>
 							<button class="btn btn-dark" type="button" id="markerTool"><span class="fa fa-pencil"></span> Marker</button>
 							<button class="btn btn-dark" type="button" id="clearTool"><span class="fa fa-eraser"></span> Penghapus</button>
@@ -59,7 +59,7 @@
 						</div>
 						<form method="post" accept-charset="utf-8" name="formUpload">
 							<input name="hidden_data" id='hidden_data' type="hidden"/>
-						</form>
+						</form> -->
 					</div>
 				</div>
 			</div>
@@ -114,17 +114,17 @@
 			clickX = new Array();
 			clickY = new Array();
 			clickDrag = new Array();
-			clearCanvas_simple(); 
+			clrCanvas(); 
 		});
 
-		function clearCanvas_simple(){
+		function clrCanvas(){
 			context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
 		}
 
 		function redraw(){
-			clearCanvas_simple();
+			clrCanvas();
 
-			context.strokeStyle = "#000";
+			context.strokeStyle = "#000000";
 			context.lineJoin = "round";
 			context.lineWidth = 2;
 

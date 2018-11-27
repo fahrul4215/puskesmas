@@ -44,7 +44,7 @@
 	</style>
 </head>
 <body>
-	<?= form_open('login'); ?>
+	<?= form_open('login/dokter'); ?>
 		<div class="container-fluid">
 			<div class="judul">
 				<div class="" id="pesan">

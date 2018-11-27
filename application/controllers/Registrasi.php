@@ -35,7 +35,7 @@ class Registrasi extends CI_Controller {
 			$this->DataRegistrasi->tambahRegistrasi();
 			// redirect('home');
 		}
-		$data['pasien'] = $this->DataPasien->getPasien();
+		$data['pasien'] = $this->DataPasien->getPasienBerobat();
 		$data['poli'] = $this->DataPoli->getPoli();
 		$data['petugas'] = $this->DataPetugas->getPetugas();
 		$tgl = date('Y-m-d', strtotime('-1 days', strtotime(date('Y-m-d'))));

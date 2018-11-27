@@ -58,7 +58,8 @@
 						<tr>
 							<td colspan="2" class="text-center">
 								<span class="input-group-btn">
-									<input class="btn btn-primary" type="submit" name="submit" value="Tambah">
+									<input class="btn btn-primary" onclick="printAntrian()" type="submit" name="submit" value="Tambah">
+									<!-- <button class="btn btn-primary" onclick="printAntrian()">Print</button> -->
 									<input class="btn btn-warning" type="reset" name="reset" value="Reset">
 									<a class="btn btn-danger" href="<?= site_url('home') ?>">Batal</a>
 								</span>
@@ -73,5 +74,29 @@
 	<?php $this->load->view('templates/section2'); ?>
 
 	<?php $this->load->view('templates/javascript'); ?>
+	<script src="https://cdn.jsdelivr.net/npm/recta/dist/recta.js"></script>
+	<script type="text/javascript">
+		var printer = new Recta('bsjdal124125', '1811');
+
+		function printAntrian(){
+			printer.open().then(function () {
+				printer.align('center')
+				.text('================================')
+				.text('Antrian Puskesmas')
+				.bold(true)
+				.feed(1)
+				.text(<?= $no_antrian ?>)
+				.mode('A', true, true, false, false)
+				.feed(1)
+				.text('Mohon Sabar Menunggu')
+				.text('Terima Kasih')
+				.text('================================')
+				.cut()
+				.print()
+			});
+		}
+
+		// window.print();
+	</script>
 </body>
 </html>

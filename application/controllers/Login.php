@@ -7,6 +7,7 @@ class Login extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('DataPetugas');
+		$this->load->model('DataDokter');
 		if ($this->uri->segment(2)) {
 			return;
 		}
@@ -52,7 +53,7 @@ class Login extends CI_Controller {
 						'level'		=> 'dokter'
 					);					
 					$this->session->set_userdata('masuk', $array);
-					redirect('Home');
+					redirect('Dokter/Diagnosa');
 				}
 			}
 			$this->session->set_flashdata('gagal', 'Username atau Password Salah');

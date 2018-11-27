@@ -12,6 +12,12 @@ class DataPasien extends CI_Model {
 		return $this->db->get('pasien')->result();
 	}
 
+	public function getPasienBerobat()
+	{
+		$query = $this->db->query("SELECT * FROM pasien p WHERE p.id_pasien NOT IN (SELECT r.id_pasien FROM registrasi r WHERE tanggal = '".date('Y-m-d')."')");
+		return $query->result();
+	}
+
 	public function tambahPasien()
 	{
 		if (!is_null($pasien = $this->db->select_max('id_pasien')->get('pasien')->result())) {

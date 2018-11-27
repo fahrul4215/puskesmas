@@ -27,6 +27,15 @@ class Dokter extends CI_Controller {
 		print $success ? $file : 'Unable to save the file.';
 	}
 
+	public function Diagnosa()
+	{
+		// var_dump($this->session->userdata('masuk'));
+		// if () {
+			
+		// }
+		$this->load->view('Dokter/viewDiagnosaDokter');
+	}
+
 }
 
 /* End of file dokter.php */
