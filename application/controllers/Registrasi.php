@@ -15,7 +15,10 @@ class Registrasi extends CI_Controller {
 
 	public function index()
 	{
-		
+		$data['registrasi'] = $this->DataRegistrasi->getRegistrasi('','',true);
+		// var_dump($data['registrasi']);
+		// die();
+		$this->load->view('Registrasi/viewRegistrasi', $data);
 	}
 
 	public function pasien()
@@ -37,7 +40,7 @@ class Registrasi extends CI_Controller {
 		}
 		$data['pasien'] = $this->DataPasien->getPasienBerobat();
 		$data['poli'] = $this->DataPoli->getPoli();
-		$data['petugas'] = $this->DataPetugas->getPetugas();
+		
 		$tgl = date('Y-m-d', strtotime('-1 days', strtotime(date('Y-m-d'))));
 		// echo $tgl;
 		$lastRegistrasi = $this->DataRegistrasi->getRegistrasi('DESC', date('Y-m-d', strtotime('-6 days', strtotime(date('Y-m-d')))));

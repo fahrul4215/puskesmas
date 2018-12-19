@@ -1,42 +1,42 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
-<html lang="">
+<html lang="id">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Input Data Poli</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
- 		</head>
- 		<body>
- 			<div class="table table-bordered table-striped">
- 				<div class="col-mx-5"></div>
- 				<div class="col-mx-5">
- 					<h1>Input Data Poli</h1>
- 					<?php 
- 						echo form_open_multipart('poli/create'); 
- 						echo validation_errors();
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Petugas | Puskesmas</title>
 
- 					?>
- 					<div class="form-group">
- 						<label>Nama Poli<font color="red">*</font></label>
- 						<input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Poli">
- 					</div>
-					
-					<p align="center"><button type="submit" class="btn btn-primary">Submit</button></p>
- 					<?php echo form_close(); ?>
- 				</div>
- 				<div class="col-md-4"></div>
- 			</div>
+	<?php $this->load->view('templates/css'); ?>
+</head>
+<body>
+	<?php $this->load->view('templates/section1'); ?>
+	<section id="main-content" class="container">
+		<section class="wrapper">
+			<div class="row mt">
+				<div class="col-lg-12 content-panel">
+					<div class="border-head">
+						<h3>INPUT DATA POLI</h3>
+					</div>
+					<div class="table table-striped">
+						<div class="col-mx-5">
+							<?php 
+							echo form_open_multipart('poli/create'); 
+							echo validation_errors();
+							?>
+							<div class="form-group">
+								<label>Nama Poli<font color="red">*</font></label>
+								<input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Poli">
+							</div>
+							<p align="center"><button type="submit" class="btn btn-primary">Submit</button></p>
+							<?php echo form_close(); ?>
+						</div>
+						<div class="col-md-4"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	<?php $this->load->view('templates/section2'); ?>
 
- 			<!-- jQuery -->
- 			<script src="//code.jquery.com/jquery.js"></script>
- 			<!-- Bootstrap JavaScript -->
- 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
- 			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
- 			<script src="Hello World"></script>
- 		</body>
- 		</html>
+	<?php $this->load->view('templates/javascript'); ?>
+</body>
+</html>

@@ -23,9 +23,9 @@
 	            			<th>Tanggal</th>
 	            			<th>Nama Pasien</th>
 	            			<th>Nama Dokter</th>
-	            			<th>ID Resep</th>
 	            			<th>Diagnosa</th>
-	            			<th>Aksi</th>
+	            			<th>Resep</th>
+	            			<!-- <th>Aksi</th> -->
 	            		</tr>
 	            	</thead>
 	            	<tbody>
@@ -33,14 +33,18 @@
 	            		<?php foreach ($RekamMedis as $rm): ?>
 		            		<tr>
 		            			<td><?= $no ?></td>
-		            			<td><?= $rm->tanggal ?></td>
+		            			<td><?= date('d-m-Y', strtotime($rm->tanggal)) ?></td>
 		            			<td><?= $rm->id_pasien ?></td>
 		            			<td><?= $rm->id_dokter ?></td>
-		            			<td><?= $rm->id_resep ?></td>
-		            			<td><?= $rm->diagnosa ?></td>
+		            			<td><img width="300" height="150" src="<?= base_url('assets/gambar/diagnosa/'.$rm->diagnosa) ?>"></td>
 		            			<td>
-		            				<?= anchor('RekamMedis/edit/'.$rm->id_rekam_medis, 'Edit', 'class="btn btn-success"'); ?>
+		            				<?php if ($rm->resep != ''): ?>
+		            					<img width="300" height="150" src="<?= base_url('assets/gambar/resep/'.$rm->resep) ?>">
+		            				<?php endif ?>
 		            			</td>
+		            			<!-- <td>
+		            				<?= anchor('RekamMedis/edit/'.$rm->id_rekam_medis, 'Edit', 'class="btn btn-success"'); ?>
+		            			</td> -->
 		            		</tr>
 		            	<?php $no++; ?>
 	            		<?php endforeach ?>

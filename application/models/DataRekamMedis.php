@@ -8,24 +8,27 @@ class DataRekamMedis extends CI_Model {
 		return $this->db->get('rekam_medis')->result();
 	}
 
-	public function createRekamMedis()
+	public function getRekamMedisByIdPasien($id_pasien)
 	{
-		if (!is_null($rekam_medis = $this->db->select_max('id_rekam_medis')->get('rekam_medis')->result())) {
-			$id_rekam_medis = $rekam_medis[0]->id_rekam_medis + 1;
-		} else {
-			$id_pasien = 1;
-		}
-		$data = array(
-			'id_rekam_medis'=> $id_rekam_medis,
-			'id_pasien'		=> $this->input->post('id_pasien'),
-			'id_dokter'		=> $this->input->post('id_dokter'),
-			'id_resep' 		=> $this->input->post('id_resep'),
-			'diagnosa'		=> $this->input->post('diagnosa'),
-			'tanggal'		=> date('Y-m-d')
-		);
-		// echo var_dump($data);
+		$this->db->select('id_rekam_medis');
+		$this->db->where('id_pasien', $id_pasien);
+		$this->db->where('resep', '');
+		return $this->db->get('rekam_medis')->result();
+	}
+
+	public function createRekamMedis($data)
+	{
 		$this->db->insert('rekam_medis', $data);
-		redirect('RekamMedis');
+	}
+
+	public function tambahResepRekamMedis($id_rekam_medis, $namaFile)
+	{
+		$data = array(
+			'resep' => $namaFile
+		);
+
+		$this->db->where('id_rekam_medis', $id_rekam_medis);
+		$this->db->update('rekam_medis', $data);
 	}
 
 }

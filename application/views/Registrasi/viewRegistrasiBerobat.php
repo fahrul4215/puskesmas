@@ -41,17 +41,6 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Nama Petugas</td>
-							<td>
-								<select name="id_petugas" class="form-control" required="required">
-									<option value="">--- Pilih Petugas ---</option>
-									<?php foreach ($petugas as $pet): ?>
-										<option value="<?= $pet->id_petugas ?>"><?= $pet->nama ?></option>
-									<?php endforeach ?>
-								</select>
-							</td>
-						</tr>
-						<tr>
 							<td>No Antrian</td>
 							<td><input type="number" name="no_antrian" class="form-control" value="<?= $no_antrian ?>" required="required" readonly></td>
 						</tr>

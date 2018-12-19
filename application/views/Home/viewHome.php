@@ -56,7 +56,7 @@
                     </div>
                     <div class="text-center" style="color: #fff;">
                       <br><i class="fa fa-group fa-4x"></i><br><br>
-                      <a class="btn btn-default" href="<?= site_url('') ?>">Kelola</a>
+                      <a class="btn btn-default" href="<?= site_url('pasien') ?>">Kelola</a>
                     </div>
                   </div>
                 </div>
@@ -67,7 +67,7 @@
                     </div>
                     <div class="text-center" style="color: #fff;">
                       <br><i class="fa fa-user-md fa-4x"></i><br><br>
-                      <a class="btn btn-default" href="<?= site_url('') ?>">Kelola</a>
+                      <a class="btn btn-default" href="<?= site_url('dokter') ?>">Kelola</a>
                     </div>
                   </div>
                 </div>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="text-center" style="color: #fff;">
                       <br><i class="fa fa-users fa-4x"></i><br><br>
-                      <a class="btn btn-default" href="<?= site_url('') ?>">Kelola</a>
+                      <a class="btn btn-default" href="<?= site_url('petugas') ?>">Kelola</a>
                     </div>
                   </div>
                 </div>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="text-center" style="color: #fff;">
                       <br><i class="fa fa-tasks fa-4x"></i><br><br>
-                      <a class="btn btn-default" href="<?= site_url('') ?>">Kelola</a>
+                      <a class="btn btn-default" href="<?= site_url('obat') ?>">Kelola</a>
                     </div>
                   </div>
                 </div>
@@ -102,7 +102,7 @@
                     </div>
                     <div class="text-center" style="color: #fff;">
                       <br><i class="fa fa-th fa-4x"></i><br><br>
-                      <a class="btn btn-default" href="<?= site_url('') ?>">Kelola</a>
+                      <a class="btn btn-default" href="<?= site_url('poli') ?>">Kelola</a>
                     </div>
                   </div>
                 </div>
@@ -113,7 +113,7 @@
                     </div>
                     <div class="text-center" style="color: #fff;">
                       <br><i class="fa fa-credit-card fa-4x"></i><br><br>
-                      <a class="btn btn-default" href="<?= site_url('') ?>">Kelola</a>
+                      <a class="btn btn-default" href="<?= site_url('kartu') ?>">Kelola</a>
                     </div>
                   </div>
                 </div>
@@ -135,7 +135,7 @@
                     </div>
                     <div class="text-center" style="color: #fff;">
                       <br><i class="fa fa-desktop fa-4x"></i><br><br>
-                      <a class="btn btn-default" href="<?= site_url('') ?>">Kelola</a>
+                      <a class="btn btn-default" href="<?= site_url('registrasi') ?>">Kelola</a>
                     </div>
                   </div>
                 </div>

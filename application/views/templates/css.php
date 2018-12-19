@@ -15,5 +15,5 @@
   <link rel="stylesheet" type="text/css" href="<?= base_url('assets/templates/') ?>lib/bootstrap-datepicker/css/datepicker.css" />
   <link rel="stylesheet" type="text/css" href="<?= base_url('assets/templates/') ?>lib/bootstrap-daterangepicker/daterangepicker.css" />
   <link rel="stylesheet" type="text/css" href="<?= base_url('assets/templates/') ?>lib/bootstrap-timepicker/compiled/timepicker.css" />
-  <link rel="stylesheet" type="text/css" href="<?= base_url('assets/templates/') ?>lib/bootstrap-datetimepicker/datertimepicker.css" />
+  <link rel="stylesheet" type="text/css" href="<?= base_url('assets/templates/') ?>lib/bootstrap-datetimepicker/css/datetimepicker.css" />
   

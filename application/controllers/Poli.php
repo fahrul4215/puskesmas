@@ -17,21 +17,18 @@ class Poli extends CI_Controller
     public function create() {
         $this->load->model('Poli_model');
         $this->form_validation->set_rules('nama', 'nama', 'trim|required');
-        $this->form_validation->set_rules('keterangan', 'keterangan', 'trim|required');
 
         if ($this->form_validation->run()==FALSE) {
             $this->load->view('input_data_view_poli');
         }else{
-                $this ->Poli_model ->insertPoli();
-                redirect('poli','refresh');
-            }
-        
+            $this ->Poli_model ->insertPoli();
+            redirect('poli','refresh');
+        }        
     }
 
     public function update($id) {
         $this->load->model('Poli_model');
         $this->form_validation->set_rules('nama', 'Nama', 'trim|required');
-        $this->form_validation->set_rules('keterangan', 'Keterangan', 'trim|required');
 
         $data['poli']=$this->Poli_model->getPoli($id);
 

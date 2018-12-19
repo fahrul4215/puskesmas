@@ -53,7 +53,7 @@ class Login extends CI_Controller {
 						'level'		=> 'dokter'
 					);					
 					$this->session->set_userdata('masuk', $array);
-					redirect('Dokter/Diagnosa');
+					redirect('DokterDiagnosa');
 				}
 			}
 			$this->session->set_flashdata('gagal', 'Username atau Password Salah');

@@ -72,6 +72,9 @@
 					<input class="btn btn-primary" name="login" type="submit" value="Login">
 					<input class="btn btn-danger" name="reset" type="reset" value="Batal">
 				</div>
+				<div class="button">
+					<a href="<?= site_url('login/dokter') ?>" class="btn btn-dark">Login as Dokter</a>
+				</div>
 			</div>
 			<div class="kanan text-center">
 				<img src="<?= base_url('assets/gambar/LogoPuskesmas.png') ?>" alt="Logo Depkes">
